@@ -13,8 +13,15 @@ namespace telluz
         public int cat_id;
         public int from;
         public int to;
+        public type  typ;
 
     }
+    public enum type
+    {
+        Daten,
+        Bild
+    }
+    [Serializable]
     public class Respond
     {
         public float value;
