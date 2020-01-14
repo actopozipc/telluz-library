@@ -1,0 +1,5 @@
+C:\Users\Windowsfus\Desktop\telluz-library-master\telluz-library-master\telluz\bin\Debug\telluz.dll
+C:\Users\Windowsfus\Desktop\telluz-library-master\telluz-library-master\telluz\bin\Debug\telluz.pdb
+C:\Users\Windowsfus\Desktop\telluz-library-master\telluz-library-master\telluz\obj\Debug\telluz.csproj.CoreCompileInputs.cache
+C:\Users\Windowsfus\Desktop\telluz-library-master\telluz-library-master\telluz\obj\Debug\telluz.dll
+C:\Users\Windowsfus\Desktop\telluz-library-master\telluz-library-master\telluz\obj\Debug\telluz.pdb
