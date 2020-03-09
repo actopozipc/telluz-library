@@ -14,7 +14,7 @@ namespace telluz
         public int from;
         public int to;
         public string key;
-        public type typ;
+        public type type;
 
         public Request(int coa_id, int cat_id, int from, int to)
         {
@@ -23,7 +23,7 @@ namespace telluz
             this.cat_id = cat_id;
             this.from = from;
             this.to = to;
-            typ = type.Daten;
+            type = type.Raw;
         }
         public Request(string coa_id, int cat_id, int year)
         {
@@ -31,7 +31,19 @@ namespace telluz
             this.cat_id = cat_id;
             this.from = year;
             this.to = year;
-            typ = type.Bild;
+            type = type.Image;
+        }
+        /// <summary>
+        /// Just for testing
+        /// Never ever use this constructor in production
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        public Request(int from, int to)
+        {
+            this.to = to;
+            this.from = from;
+            this.type = type.Everything;
         }
         public Error checkForError()
         {
@@ -70,8 +82,9 @@ namespace telluz
 
     public enum type
     {
-        Daten,
-        Bild
+        Raw,
+        Image,
+        Everything //just for test-purposes
     }
     [Serializable]
     public class Response

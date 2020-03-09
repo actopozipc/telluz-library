@@ -7,3 +7,7 @@ C:\Users\paralysat\Documents\GitHub\telluz-library\telluz\bin\Debug\telluz.dll
 C:\Users\paralysat\Documents\GitHub\telluz-library\telluz\bin\Debug\telluz.pdb
 C:\Users\paralysat\Documents\GitHub\telluz-library\telluz\obj\Debug\telluz.dll
 C:\Users\paralysat\Documents\GitHub\telluz-library\telluz\obj\Debug\telluz.pdb
+C:\Users\Windowsfus\Documents\GitHub\telluz-library\telluz\obj\Debug\telluz.dll
+C:\Users\Windowsfus\Documents\GitHub\telluz-library\telluz\obj\Debug\telluz.pdb
+C:\Users\Windowsfus\Documents\GitHub\telluz-library\telluz\bin\Debug\telluz.dll
+C:\Users\Windowsfus\Documents\GitHub\telluz-library\telluz\bin\Debug\telluz.pdb
