@@ -27,10 +27,10 @@ namespace telluz
         }
         public Request(string coa_id, int cat_id, int year)
         {
-            this.key = coa_id;
+            key = coa_id;
             this.cat_id = cat_id;
-            this.from = year;
-            this.to = year;
+            from = year;
+            to = year;
             type = type.Image;
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace telluz
         {
             this.to = to;
             this.from = from;
-            this.type = type.Everything;
+            type = type.Everything;
         }
         public Error checkForError()
         {
@@ -62,17 +62,17 @@ namespace telluz
             errorMessage = "";
             if (request.cat_id < 0 || request.cat_id > 77)
             {
-                errorMessage = "Non-existing category";
+                errorMessage = "Category does not exist";
                 hasErrors = true;
             }
             if (request.coa_id < 0 || request.coa_id > 264)
             {
-                errorMessage = "Non-existing country or area";
+                errorMessage = "Country or region does not exist";
                 hasErrors = true;
             }
-            if (request.from < 1960 || request.to < 1960)
+            if (request.from < 1960 || request.to < 1960 || (request.from>request.to))
             {
-                errorMessage = "Year too early";
+                errorMessage = "Year invalid";
                 hasErrors = true;
             }
 
@@ -89,12 +89,13 @@ namespace telluz
     [Serializable]
     public class Response
     {
-        public List<ValuePair> valuePair;
+        public List<ValuePair> valuePairList { get; set; }
         public string errorMessage;
         public double colorVal { get; set; }
+        public string coa { get; set; }
         public Response(Error error)
         {
-            this.valuePair = new List<ValuePair>() { new ValuePair(false, -210, -210) };
+            this.valuePairList = new List<ValuePair>() { new ValuePair(false, -210, -210) };
             this.errorMessage = error.errorMessage;
         }
         public Response()
